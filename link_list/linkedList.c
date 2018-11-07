@@ -62,13 +62,30 @@ bool insertAfter(int key, int toAdd,  int data) //Inserts element after element 
 
 	return 0;
 }
-
-bool deleteItem(int key)  //Deletes element from list specified by key, returns true if successful
+*/
+struct node* deleteItem(int key)  //Deletes element from list specified by key, returns true if successful
 {
+	struct node* current = head;
+	struct node* previous = NULL;
 
+	if(!head) {
+		return NULL;
+	}
+	
+	while(current->key != key)
+	{
+		if(current->next == NULL)
+		{
+			return NULL;
+		}
+		else
+		{
+			previous = current;
+			current = current->next;
+		}
 
 	return 0;
-}*/
+}
 
 void displayForward() //Displays list from front to back
 {

@@ -13,11 +13,10 @@
 
 int main()
 {
-	//struct node *head = NULL;
-	//struct node *tail = NULL;
 	
-	//Call main menu
-	mainMenu();
+	
+	//build a linked list to manipulate
+	
 	insertFirst(1,4);
 	insertFirst(2,5);
 	insertFirst(3,4);
@@ -26,6 +25,8 @@ int main()
         insertFirst(6,5);
 	
 	displayForward();
+	//Load main menu
+	mainMenu();
 
 	deleteFirst(7);
 	displayForward();
@@ -43,29 +44,24 @@ void mainMenu() //User interface to access different API's
 		printf("\nWelcome to Foscorp data structure management tool\n");
 		printf("[1]	Linked List Menu \n");
 		printf("[2]	BST Menu \n");
-		printf("[3]	Exit API \n");
-		printf("Make a selection and press enter \n");
+		printf("[0]	Exit API \n");
+		printf("\nMake a selection and press enter ");
 		scanf("%d", &selection);
 		printf("You entered %d  \n", selection);
-
-		if(selection == 0)
-		{
-			printf("Zero wasn't an option\n");
-		}
 		
 		switch(selection)
 		{
 			case 1:
-				printf("Loading LLL Menu.... \n");
+				printf("\nLoading LLL Menu.... \n");
 				linkedListMenu();
 			case 2:
-				printf("Under Construction.. \n");
+				printf("\nUnder Construction.. \n");
 				break;
 		}
 
-	}while(selection == 3);
+	}while(selection != 0);
 	
-	printf("Thanks for choosing Foscorp! \n");
+	printf("\n\nThanks for choosing Foscorp! \n");
 	exit(0);
 
 }
@@ -123,7 +119,7 @@ void linkedListMenu() //User interface for linked list implementation
    		}
 		
 	}while(selection != 0);
-	printf("Returning to Main Menu. \n");
+	printf("\nReturning to Main Menu... \n");
 	mainMenu();
 
 }
