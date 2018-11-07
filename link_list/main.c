@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "main.h"
 #include "linkedList.h"
 
 
@@ -24,6 +25,7 @@ int main()
 	insertFirst(5,4);
         insertFirst(6,5);
 	
+	printf("Current List: \n");
 	displayForward();
 	//Load main menu
 	mainMenu();
@@ -124,6 +126,11 @@ void linkedListMenu() //User interface for linked list implementation
 
 }
 
-//void bstMenu(); //Binary Search tree menu
+void bstMenu() //Binary Search tree menu
+{
+
+	printf("This menu is under construction..\n Try again later.\n");
+
+}
 
 

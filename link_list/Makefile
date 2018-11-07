@@ -6,7 +6,7 @@ all: linkedList
 linkedList: main.o linkedList.o
 	gcc -g -Wall main.o linkedList.o -o linkedList
 
-main.o: main.c linkedList.h 
+main.o: main.c linkedList.h main.h 
 	gcc -g -Wall -c main.c
 
 linkedList.o: linkedList.c linkedList.h

@@ -37,8 +37,8 @@ void displayForward(); //Displays list from front to back
 //void displayBackward(); //Displays list from rear to front
 bool isEmpty(); //Helper function checks if list is empty and returns true
 struct node* find(int key);  //helper function for element retrieval
-void mainMenu();
-void linkedListMenu();
+//void mainMenu();
+//void linkedListMenu();
 
 
 

@@ -83,8 +83,19 @@ struct node* deleteItem(int key)  //Deletes element from list specified by key, 
 			previous = current;
 			current = current->next;
 		}
+	}
 
-	return 0;
+	//found the element
+	if(current == head)
+	{
+		head = head->next;
+	}
+	else
+	{
+		previous->next = current->next;
+	}
+
+	return current;
 }
 
 void displayForward() //Displays list from front to back
@@ -97,7 +108,7 @@ void displayForward() //Displays list from front to back
 		ptr = ptr->next;
 	}
 
-	printf(" ]");
+	printf("] \n");
  
 }
 //void displayBackward(); //Displays list from rear to front
