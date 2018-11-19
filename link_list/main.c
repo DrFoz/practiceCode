@@ -57,8 +57,8 @@ void mainMenu() //User interface to access different API's
 				printf("\nLoading LLL Menu.... \n");
 				linkedListMenu();
 			case 2:
-				printf("\nUnder Construction.. \n");
-				break;
+				printf("\nLoading BST Menu....\n");
+				bstMenu();
 		}
 
 	}while(selection != 0);
@@ -128,8 +128,27 @@ void linkedListMenu() //User interface for linked list implementation
 
 void bstMenu() //Binary Search tree menu
 {
+	int selection;
+	int data;
 
-	printf("This menu is under construction..\n Try again later.\n");
+	do
+	{
+		printf("\nBST tools list\n");
+		printf("[1]	Add item\n");
+		printf("[2]	Delete item\n");
+		printf("[3]	find item\n");
+		printf("[0]	Exit to Main Menu\n");
+		printf("\nMake a selection and press enter\n");
+		scanf("%d", &selection);
+		switch(selection)
+		{
+			case 1:
+				printf("\nAdd item, enter value for item to add\n");
+		}
+	}
+	while(selection != 0);
+	printf("\nReturning to Main Menu..\n");
+	mainMenu();
 
 }
 
